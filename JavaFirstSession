@@ -1,0 +1,65 @@
+public class JavaFirstSession {
+    public static void main(String args[]) {
+      Mobile mobile = new Mobile();
+      //mobile.playSong("ABCD Song");
+      
+      System.out.println("Brand is "+mobile.brand);
+      
+      mobile.brand = "Samsung";
+      
+      System.out.println("Brand is "+mobile.brand);
+      
+      System.out.println("Display Size of "+mobile.brand+" is " +mobile.getDisplaySize());
+      
+      float displaySize = 5.5000000f;
+      
+      mobile.setDisplaySize(displaySize);
+      
+      System.out.println("Display Size of "+mobile.brand+" is " +mobile.getDisplaySize());
+      
+      //mobile.displaySize;
+      
+      //Mobile.callStaticMethod();
+      //mobile.callStaticMethod();
+    }
+}
+
+class Mobile {
+	private String display;
+	private float displaySize;
+    private int ram;
+    private String processor;
+    
+    public String brand = "Apple";
+    
+    public static void callStaticMethod(){
+        
+        System.out.println("Static Method is called...");
+        
+    }
+    
+    public String getBrand(){
+        
+        return this.brand;
+        
+    }
+    
+    public float getDisplaySize(){
+        return this.displaySize;
+    }
+    
+    public void setDisplaySize(float displaySize){
+        this.displaySize = displaySize;
+    }
+    
+
+    public void playSong(String songName){
+    	System.out.println(songName + " is playing currently");
+    }
+    
+    public void makeCall(long mobileNumber, String contactName){
+    	System.out.println("Calling " + contactName);
+    
+    }
+
+}
